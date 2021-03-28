@@ -86,4 +86,56 @@ let book = {
     AND no extra key can be added to the object - It is strict but prevents a lot of bugs.
  */
 
-    
+
+// *********************************** LESSON 4 - EXPLICIT TYPES  ***********************************
+
+let characterName: string; // Can save only string values
+let characterAge: number;  // Can save only number values
+let characterJob: string; 
+let characterFriends: string[] = [];  // Can save only string values in this array
+let characterRandomData: (string | number)[] = []; // Can save both string and arrays ---- UNION TYPES ---
+let characterInfoObject1: {};  // Can create an object
+let characterInfoObject2: object;  // Can create an object or an Array
+let characterInfoObject3: { // Can have only the following keys in the object
+    name: string,
+    age: number,
+    job: string
+}
+
+characterName = "Shahi";
+characterAge = 28;
+characterJob= "Frontend Dev";
+characterFriends = ["John", "Jane"];
+characterInfoObject1 = {
+    name: "shahi"
+};
+characterInfoObject1 = {
+    name: "shahi",
+    age: 28
+};
+characterInfoObject2 = {
+    name: "shahi",
+    age: 28,
+    job: 'frontend dev',
+    isNoobDev: true
+}
+
+characterInfoObject2 = ["shahi", 27, 'frontend dev', true];
+
+/*
+characterInfoObject3={ // Type '{ name: string; }' is missing the following properties from type '{ name: string; age: number; job: string; }': age, job
+    name: "shahi",
+}
+ */
+
+characterInfoObject3 = {
+    name: 'shahi',
+    age: 20,
+    job: 'frontend dev',
+    // skills: ["React", "React Native"]  
+    /* 
+    Type '{ name: string; age: number; job: string; skills: string[]; }' is not assignable to type '{ name: string; age: number; job: string; }'.
+    Object literal may only specify known properties, and 'skills' does not exist in type '{ name: string; age: number; job: string; }
+    */
+}
+

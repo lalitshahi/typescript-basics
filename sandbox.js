@@ -53,3 +53,40 @@ var book = {
     the keys inside the object can have the values of the same type as in the object definition
     AND no extra key can be added to the object - It is strict but prevents a lot of bugs.
  */
+// *********************************** LESSON 4 - EXPLICIT TYPES  ***********************************
+var characterName; // Can save only string values
+var characterAge; // Can save only number values
+var characterJob;
+var characterFriends = []; // Can save only string values in this array
+var characterRandomData = []; // Can save both string and arrays ---- UNION TYPES ---
+var characterInfoObject1; // Can create an object
+var characterInfoObject2; // Can create an object or an Array
+var characterInfoObject3;
+characterName = "Shahi";
+characterAge = 28;
+characterJob = "Frontend Dev";
+characterFriends = ["John", "Jane"];
+characterInfoObject1 = {
+    name: "shahi"
+};
+characterInfoObject1 = {
+    name: "shahi",
+    age: 28
+};
+characterInfoObject2 = {
+    name: "shahi",
+    age: 28,
+    job: 'frontend dev',
+    isNoobDev: true
+};
+characterInfoObject2 = ["shahi", 27, 'frontend dev', true];
+/*
+characterInfoObject3={ // Type '{ name: string; }' is missing the following properties from type '{ name: string; age: number; job: string; }': age, job
+    name: "shahi",
+}
+ */
+characterInfoObject3 = {
+    name: 'shahi',
+    age: 20,
+    job: 'frontend dev'
+};
