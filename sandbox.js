@@ -1,11 +1,11 @@
-// Lesson 1 - Compiling Typescript
+// *********************************** LESSON 1 - COMPILING TYPESCRIPT ***********************************
 var character = "Lalit";
 console.log(character);
 var inputs = document.querySelectorAll("input");
 console.log(inputs);
 // tsc <ts filename>  ====> to compile the TS file into vanila JS
 // tsc <ts filename> -w  ====> to complie the TS file into vanila JS and watch for every change in the TS file
-// Lesson 2 - Types Basics
+// *********************************** LESSON 2 - TYPES BASICS ***********************************
 var person = "Shahi";
 var age = 28;
 var isDevNoob = true;
@@ -27,3 +27,29 @@ var countTotalCommits = function (commits, days) {
 };
 // countTotalCommits("shahi", 30); // Gives compilation error, argument expected of type number but provided as string.
 countTotalCommits(10, 30);
+// *********************************** LESSON 3 - OBJECTS & ARRAYS ***********************************
+/*
+* ARRAYS
+*/
+var ages = [20, 30, 40]; // By defining an array with a specific type of values we set rule that only numbers can be added to this array.
+// ages[1]= '50'; // Type 'string' is not assignable to type 'number'.
+ages.push(50); // This will work
+// ages.push('50');  ==== This wont work -- Argument of type 'string' is not assignable to parameter of type 'number'.
+var namesAndAges = ["Shahi", 28, "Lalit", 27]; // We have set the rule that this array can contain values of STRING and NUMBER type
+namesAndAges[1] = 30; // Now the value can be either the string or a number but it can not be of any other type
+// namesAndAges.push(false); // Argument of type 'boolean' is not assignable to parameter of type 'string | number'.
+/*
+* OBJECTS
+*/
+var book = {
+    title: 'Typescript Handbook',
+    cost: 280,
+    author: 'ABC'
+};
+/*
+ The object definition in typescript also works the same way as the normal variable
+    It can be of only OBJECT TYPE and
+    it can only have the same number of keys inside it and
+    the keys inside the object can have the values of the same type as in the object definition
+    AND no extra key can be added to the object - It is strict but prevents a lot of bugs.
+ */
