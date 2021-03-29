@@ -90,3 +90,7 @@ characterInfoObject3 = {
     age: 20,
     job: 'frontend dev'
 };
+var anyTypeVariable; // Using any makes the variable a flexible variable type, we can set a value of any type to the varaible
+anyTypeVariable = 20;
+anyTypeVariable = "shahi";
+anyTypeVariable = true;

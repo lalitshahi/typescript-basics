@@ -139,3 +139,9 @@ characterInfoObject3 = {
     */
 }
 
+let anyTypeVariable: any; // Using any makes the variable a flexible variable type, we can set a value of any type to the varaible
+
+anyTypeVariable = 20;
+anyTypeVariable =  "shahi";
+anyTypeVariable =  true;
+
