@@ -99,7 +99,8 @@ let characterInfoObject2: object;  // Can create an object or an Array
 let characterInfoObject3: { // Can have only the following keys in the object
     name: string,
     age: number,
-    job: string
+    job: string,
+    skills: string[]
 }
 
 characterName = "Shahi";
@@ -132,7 +133,7 @@ characterInfoObject3 = {
     name: 'shahi',
     age: 20,
     job: 'frontend dev',
-    // skills: ["React", "React Native"]  
+    skills: ["React", "React Native"]  
     /* 
     Type '{ name: string; age: number; job: string; skills: string[]; }' is not assignable to type '{ name: string; age: number; job: string; }'.
     Object literal may only specify known properties, and 'skills' does not exist in type '{ name: string; age: number; job: string; }
