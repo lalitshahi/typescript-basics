@@ -100,7 +100,7 @@ let characterInfoObject3: { // Can have only the following keys in the object
     name: string,
     age: number,
     job: string,
-    skills: string[]
+    skills?: string[]
 }
 
 characterName = "Shahi";
@@ -143,6 +143,6 @@ characterInfoObject3 = {
 let anyTypeVariable: any; // Using any makes the variable a flexible variable type, we can set a value of any type to the varaible
 
 anyTypeVariable = 20;
-anyTypeVariable =  "shahi";
+anyTypeVariable = "shahi";
 anyTypeVariable =  true;
 
